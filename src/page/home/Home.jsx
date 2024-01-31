@@ -17,14 +17,6 @@ export const Home = () => {
                         return value;
                     });
                     setDataArray(meetup.tasks)
-                    // if(meetup.authenticated) {
-                    //     //navigate('/home-page');
-                    //     console.log('xhr', meetup.token)
-                    //     localStorage.setItem('token', meetup.token)
-                    // } else {
-                    //     console.log('xhr', meetup)
-                    //     //TODO: вывод ошибки, либо состояние ошибки контролить
-                    // }
                 }
 
                 if (xhr.status === 400) {
@@ -60,7 +52,7 @@ export const Home = () => {
     }
 
     useEffect(() => {
-        void getAllTasks(); // Ensure data is fetched correctly
+        void getAllTasks();
     }, [getAllTasks]);
 
     return (
@@ -106,12 +98,6 @@ export const Home = () => {
                         </tr>
                     )}
                     </tbody>
-                    {/*<label>Задача</label>*/}
-                    {/*<input type="text" defaultValue={item.description}/>*/}
-                    {/*<label>Дата</label>*/}
-                    {/*<input type="text" defaultValue={item.due}/>*/}
-                    {/*<UpdateTask getAllTasks={getAllTasks} id={item.id}/>*/}
-                    {/*<button onClick={() => deleteTasks(item.id)}>Удалить</button>*/}
                 </table>
             </div>
         </div>

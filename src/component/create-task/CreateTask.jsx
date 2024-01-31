@@ -20,15 +20,6 @@ export const CreateTask = ({getAllTasks}) => {
         xhr.onload = function () {
             if (xhr.status === 200) {
                 getAllTasks()
-                //setDataArray(meetup.tasks)
-                // if(meetup.authenticated) {
-                //     //navigate('/home-page');
-                //     console.log('xhr', meetup.token)
-                //     localStorage.setItem('token', meetup.token)
-                // } else {
-                //     console.log('xhr', meetup)
-                //     //TODO: вывод ошибки, либо состояние ошибки контролить
-                // }
             }
 
             if (xhr.status === 400) {
